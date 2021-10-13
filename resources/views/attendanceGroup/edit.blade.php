@@ -58,7 +58,7 @@
                     <a style="color:red" href="{{ url('/')}}">School-laravel</a>
                 </div>
 
-                <form class="white" action="{{route('attendanceGroup.update', [$attendanceGroup])}}" method="get">
+                <form class="white" action="{{route('attendanceGroup.update', [$attendanceGroup])}}" method="post">
                     <a>Name: </a><input type="text" name="attendanceGroup_name" value="{{$attendanceGroup->name}}" /><br>
                     <a>Description: </a> <input type="text" name="attendanceGroup_description" value="{{$attendanceGroup->description}}" /><br>
                     <a>Difficulty: </a> <input type="text" name="attendanceGroup_difficulty" value="{{$attendanceGroup->difficulty}}" /><br>

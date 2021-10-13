@@ -26,7 +26,8 @@ class StudentFactory extends Factory
             'name' => $this->faker->firstName(),
             'surname' => $this->faker->lastName() ,
             'group_id' => rand(1,5),
-            'image_url' => $this->faker->imageUrl(360, 360, 'animals', true, 'dogs', true),
+            'image_url' => $this->faker->imageUrl(640, 480, 'animals', true),
+            // 'dogs', true),
         ];
     }
 }

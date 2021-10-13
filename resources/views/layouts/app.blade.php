@@ -39,11 +39,17 @@
         background-color: red;
         }
         .green:hover {
-        background-color: green;
+        background-color: rgb(209, 231, 209);
         }
         .gray {
             background-color:rgb(219, 219, 219);
             }
+        .hide {
+            content: hide;
+        }
+        .nav-left {
+            float: right ;
+        }
     </style>
 
 </head>
@@ -51,6 +57,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md dark:bg-gray-900 bg-white shadow-sm">
             <div class="container">
+                <img src="/images/laravel.png" height="40px" width="120px" alt="">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>

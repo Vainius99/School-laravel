@@ -32,7 +32,7 @@
                 <a style="color:yellow;" href="{{ url('/students/create')}}">Create Student</a>
 
 
-                <table>
+                <table class="table table-striped">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -48,9 +48,9 @@
                         <td><a class="green" href="{{route('student.show', [$student])}}">{{ $student->name }}</a></td>
                         <td>{{ $student->surname }}</td>
                         <td>{{ $student->group_id}}</td>
-                        <td>{{ $student->image_url}}</td>
+                        <td> <img height="200" weight="200" src="{{ $student->image_url}}"></td>
                         <td>
-                            <a class="yellow" href="{{route('student.edit', [$student]) }}">Edit</a>
+                            <a class="yellow btn" href="{{route('student.edit', [$student]) }}">Edit</a>
                             <form method="post" action="{{route('student.destroy', [$student]) }}">
                                 @csrf
                                 <button class="red" type="submit">Delete</button>

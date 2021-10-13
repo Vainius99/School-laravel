@@ -32,9 +32,9 @@
 
                 <a style="color:yellow;" href="{{ url('/schools/create')}}">Create School</a>
 
-                <table>
+                <table class="table table-striped">
                     <tr>
-                        <th>ID</th>
+                        <th>ID </th>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Place</th>

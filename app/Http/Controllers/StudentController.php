@@ -40,13 +40,21 @@ class StudentController extends Controller
         $student ->name = $request->student_name;
         $student ->surname = $request->student_surname;
         $student ->group_id = $request->student_group_id;
-        $student ->image_url = $request->student_image_url;
+        // $student ->image_url = $request->student_image_url;
 
-        $student ->save();
+        if($request->has('student_image_url'))
+        {
+            $imageName = time().'.'.$request->student_image_url->extension();
+            $student->image_url = '/images/'.$imageName;
+            $request->student_image_url->move(public_path('images'), $imageName);
+        } else {
+            $student->image_url = '/images/placeholder.png';
+        }
 
-        return redirect()->route('student.index');
+
+        $student->save();
+        return redirect()->route("student.index");
     }
-
     /**
      * Display the specified resource.
      *
@@ -81,7 +89,14 @@ class StudentController extends Controller
         $student->name = $request->student_name;
         $student->surname = $request->student_surname;
         $student->group_id = $request->student_group_id;
-        $student->image_url = $request->student_image_url;
+        // $student->image_url = $request->student_image_url;
+
+        if($request->has('student_image_url'))
+        {
+            $imageName = time().'.'.$request->student_image_url->extension();
+            $student->image_url = '/images/'.$imageName;
+            $request->student_image_url->move(public_path('images'), $imageName);
+        }
 
         $student->save();
 

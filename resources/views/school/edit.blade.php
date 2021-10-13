@@ -58,7 +58,7 @@
                     <a style="color:red" href="{{ url('/')}}">School-laravel</a>
                 </div>
 
-                <form class="white" action="{{route('school.update', [$school])}}" method="get">
+                <form class="white" action="{{route('school.update', [$school])}}" method="post">
                     <a>Name: </a><input type="text" name="school_name" value="{{$school->name}}" /><br>
                     <a>Description: </a> <input type="text" name="school_description" value="{{$school->description}}" /><br>
                     <a>Place: </a> <input type="text" name="school_place" value="{{$school->place}}" /><br>

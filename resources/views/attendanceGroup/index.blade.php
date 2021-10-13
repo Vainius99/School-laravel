@@ -30,7 +30,7 @@
                 <a style="color:yellow;" href="{{ url('/attendanceGroup/create')}}">Create Attendance Group</a>
 
 
-                <table>
+                <table class="table table-striped">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>

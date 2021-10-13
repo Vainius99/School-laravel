@@ -18,7 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string("name");
             $table->string("surname");
             $table->bigInteger("group_id");
-            $table->string("image_url");
+            $table->string("image_url", 600);
             $table->timestamps();
         });
     }

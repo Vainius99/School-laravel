@@ -6,9 +6,10 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">{{ __('Create') }}</div>
-                    <form class="white form-group" action="{{route('student.store')}}" method="post">
+                    <form class="white form-group" action="{{route('student.store')}}" method="post" enctype="multipart/form-data">
                         <div class="form-group row">
                             <label for="student_name" class="col-md-4 col-form-label text-md-right"> Name: </label>
+                            {{-- {{__('student name') }} --}}
                             <input class="gray form-control col-md-6" type="text" name="student_name" placeholder="Enter client name" />
                         </div>
                         <div class="form-group row">
@@ -21,7 +22,7 @@
                         </div>
                         <div class="form-group row">
                             <label for="student_image_url" class="col-md-4 col-form-label text-md-right"> Image: </label>
-                            <input class="gray form-control col-md-6" type="text" name="student_image_url" placeholder="Enter image url" />
+                            <input class="gray form-control col-md-6" type="file" name="student_image_url" placeholder="Enter image url" />
                         </div>
                     @csrf
                         <div class="form-group row mb-0">
